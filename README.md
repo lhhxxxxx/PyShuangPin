@@ -53,4 +53,4 @@ print(sp)
 
 [pypinyin库](https://pypi.org/project/pypinyin/)
 
-思路来源 [@MistEO]([@MistEO](https://github.com/MistEO/)) [python-shuangpin](https://github.com/MistEO/python-shuangpin)
+思路来源 [@MistEO](https://github.com/MistEO/) [python-shuangpin](https://github.com/MistEO/python-shuangpin)
