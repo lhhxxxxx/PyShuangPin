@@ -1,4 +1,4 @@
-from . import finals_register, initials_register, zero_initial_finals_register
+from . import finals_register, initials_register, zero_initial_finals_register, Mode
 
 initials_dict = {
     'sh': 'u',
@@ -73,3 +73,6 @@ def xiaohe(initials: str):
 @zero_initial_finals_register.register("小鹤")
 def xiaohe(finals: str):
     return zero_initial_finals_dict.get(finals, finals)
+
+
+Mode.xiaohe = "xiaohe"

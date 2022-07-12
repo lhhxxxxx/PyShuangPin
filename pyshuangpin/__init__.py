@@ -1,9 +1,9 @@
-from .modules import initials_register, finals_register, zero_initial_finals_register, Style
+from .modules import initials_register, finals_register, zero_initial_finals_register, Style, Mode
 
 import pypinyin
 
 
-def shuangpin(hans, mode="xiaohe", style=Style.NORMAL, heteronym=False):
+def shuangpin(hans, mode=Mode.xiaohe, style=Style.NORMAL, heteronym=False):
     try:
         if style == Style.NORMAL:
             initials = pypinyin.pinyin(hans, heteronym=heteronym, style=pypinyin.INITIALS,
@@ -59,7 +59,7 @@ def shuangpin(hans, mode="xiaohe", style=Style.NORMAL, heteronym=False):
         return None
 
 
-def lazy_shuangpin(hans, mode: str, style: Style, tone_sandhi=False):
+def lazy_shuangpin(hans, mode=Mode.xiaohe, style=Style.NORMAL, tone_sandhi=False):
     try:
         if style == Style.NORMAL:
             initials = pypinyin.lazy_pinyin(hans, tone_sandhi=tone_sandhi, style=pypinyin.INITIALS,

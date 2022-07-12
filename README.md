@@ -15,6 +15,8 @@ sp = shuangpin(hans, mode="xiaohe", style=Style.NORMAL)
 print(sp)
 sp = shuangpin(hans, mode="小鹤", style=Style.NORMAL)
 print(sp)
+sp = shuangpin(hans, mode=Mode.xiaohe, style=Style.NORMAL)
+print(sp)
 sp = shuangpin(hans, mode="xiaohe", style=Style.TONE)
 print(sp)
 sp = shuangpin(hans, mode="xiaohe", style=Style.INITIALS)
@@ -27,7 +29,7 @@ sp = lazy_shuangpin(hans, mode="xiaohe", style=Style.NORMAL)
 print(sp)
 ```
 其中，``mode``参数可以是以下几种（参阅 [可扩展性](#可扩展性)）：
-* ``"xiaohe"``、``"小鹤"``：小鹤双拼，默认模式
+* ``"xiaohe"``、``"小鹤"``、``Mode.xiaohe``：小鹤双拼，默认模式
 
 ``style``参数可以是以下几种：
 * ``Style.NORMAL``：普通样式，默认模式
@@ -48,6 +50,8 @@ print(sp)
 * ``@zero_initial_finals_register.register``注册零声母韵母字典，可使用``@zero_initial_finals_register.register(name:str)``修改注册名（默认函数名），可以多次注册。
 
 注册后将``mode``参数设为注册名，即可使用。
+
+可以将字符串添加至枚举类Mode中
 
 ## 鸣谢
 

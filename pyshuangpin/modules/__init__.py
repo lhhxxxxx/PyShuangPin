@@ -55,6 +55,10 @@ class Style(Enum):
     FINALS_TONE = 9
 
 
+class Mode(Enum):
+    pass
+
+
 finals_register = Register()
 initials_register = Register()
 zero_initial_finals_register = Register()
